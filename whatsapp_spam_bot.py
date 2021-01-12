@@ -5,26 +5,24 @@ import time
 
 # Define some stuff
 browser  = webdriver.Chrome(ChromeDriverManager().install())
-ready_message = "go ahead"
-ready_to_send_message = "send"
+#platform = input("What platform do you want to use? Instagram or whatsapp. ")
 
 # Start the browser and go to the site
 browser.get('https://web.whatsapp.com')
 
 # Check if the user is ready
-ready = input("If you want to go ahead and you have scanned the qr code type '" + ready_message + "' ")
-
 while True:
-    if ready == ready_message:
+    if input("If you want to go ahead and you have scanned the qr code type 'go ahead'. ") == "go ahead":
         break
 
 # Define "send()"
 def send():
     # Choose the person
-    browser.find_element_by_css_selector("span[title='" + input("Enter name to spam: ") + "']").click()
+    browser.find_element_by_css_selector("span[title='" + input("Enter the name or group to spam: ") + "']").click()
 
     # Enter the message
     inputString = input("Enter message to send: ")
+    print("Started spamming!")
 
     # Send the messages
     try:
@@ -33,14 +31,9 @@ def send():
             browser.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[3]/button').click()
 
     except KeyboardInterrupt:
-        print("Stopped spamming")
+        print("Stopped spamming...")
         pass
 
-
-# Choose what to do
-#what_do_you_want_to_do = input("What do you want to do? ")
-
-# Spam
+# Send the messages
 while True:
-    if input("What do you want to do? ") == "send":
-        send()
+    send()
