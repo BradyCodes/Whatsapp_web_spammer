@@ -33,7 +33,7 @@ def send():
             browser.find_element_by_xpath('//*[@id="main"]/footer/div[1]/div[3]/button').click()
 
     except KeyboardInterrupt:
-        print("Press Ctrl-C to terminate while statement")
+        print("Stopped spamming")
         pass
 
 
