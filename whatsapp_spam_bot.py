@@ -1,5 +1,3 @@
-#to install everything do "py -m pip install selenium selenium" and "py -m pip install selenium webdriver-manager"
-
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
