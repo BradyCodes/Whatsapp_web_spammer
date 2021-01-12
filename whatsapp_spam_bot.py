@@ -16,13 +16,13 @@ while True:
         break
 
 # Define "send()"
-def send():
+def send(instagram):
     # Choose the person
     browser.find_element_by_css_selector("span[title='" + input("Enter the name or group to spam: ") + "']").click()
 
     # Enter the message
     inputString = input("Enter message to send: ")
-    print("Started spamming!")
+    print("Started spamming! If you want to stop it press Ctrl+C.")
 
     # Send the messages
     try:
@@ -36,4 +36,4 @@ def send():
 
 # Send the messages
 while True:
-    send()
+    send("instagram")
