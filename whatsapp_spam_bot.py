@@ -5,7 +5,7 @@ import time
 
 # Define some stuff
 browser  = webdriver.Chrome(ChromeDriverManager().install())
-platform = input("What platform do you want to use? Instagram or WhatsApp, it's case sensitive. ").lower()
+platform = input("What platform do you want to use? Instagram or WhatsApp: ").lower()
 
 # Choose to use Instagram or WhatsApp
 
